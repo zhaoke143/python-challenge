@@ -35,31 +35,32 @@ with open(csv_path, newline = "") as csvfile:
                 winner_count = candidates[k]
 
 
-print(candidates_percents)
-print(candidates)
+
 # Print to terminal
 print(f"Election Results")
 print(f"-------------------------------------")
 print(f"Total Votes:  {total_votes}")
 print(f"-------------------------------------")
-for k, v in candidates.items():
-    print(k + ": " + str(candidates_percents[k]) + "% (" + str(v) + ")")
+print("Khan: " + str(candidates_percents["Khan"]) + "% (" + str(candidates["Khan"]) + ")")
+print("Khan: " + str(candidates_percents["Correy"]) + "% (" + str(candidates["Correy"]) + ")")
+print("Khan: " + str(candidates_percents["Li"]) + "% (" + str(candidates["Li"]) + ")")
 print(f"-------------------------------------")
 print(f"Winner: {winner}")
 print(f"-------------------------------------")
 
 with open(output_path, 'w') as file:
-    file.write(f"Election Results")
-    file.write(f"-------------------------------------")
-    file.write(f"Total Votes: {total_votes}")
-    file.write(f"-------------------------------------")
-    for k, v in candidates.items():
-        file.write(k + ": " + str(candidates_percents[k]) + "% (" + str(v) + ")")
-    file.write(f"-------------------------------------")
-    file.write(f"Winner: {winner}")
-    file.write(f"-------------------------------------")
+    file.write(f"Election Results \n" )
+    file.write(f"------------------------------------- \n") 
+    file.write(f"Total Votes: {total_votes} \n")
+    file.write(f"------------------------------------- \n")
+    file.write("Khan: " + str(candidates_percents["Khan"]) + "% (" + str(candidates["Khan"]) + ") \n")
+    file.write("Khan: " + str(candidates_percents["Correy"]) + "% (" + str(candidates["Correy"]) + ") \n")
+    file.write("Khan: " + str(candidates_percents["Li"]) + "% (" + str(candidates["Li"]) + ") \n")
+    file.write(f"------------------------------------- \n")
+    file.write(f"Winner: {winner} \n")
+    file.write(f"------------------------------------- \n")
 
 
-    
+   
    
 
